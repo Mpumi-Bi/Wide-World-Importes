@@ -1,0 +1,106 @@
+﻿-- Accounts Receivable
+-- To determine which customers have outstanding balances
+
+-- Accounts Receivables
+SELECT 
+a.CustomerID
+,a.OutstandingBalance
+,b.CustomerName
+FROM WideWorldImporters.Sales.CustomerTransactions a
+JOIN WideWorldImporters.Sales.Customers b
+ON a.CustomerID = b.CustomerID
+WHERE OutstandingBalance != 0
+
+--*Results*
+
+CustomerID  OutstandingBalance                      CustomerName
+----------- --------------------------------------- ----------------------------------------------------------------------------------------------------
+1           496.80                                  Tailspin Toys (Head Office)
+1           1434.05                                 Tailspin Toys (Head Office)
+1           1287.08                                 Tailspin Toys (Head Office)
+1           3199.12                                 Tailspin Toys (Head Office)
+1           1617.82                                 Tailspin Toys (Head Office)
+1           4839.66                                 Tailspin Toys (Head Office)
+1           358.80                                  Tailspin Toys (Head Office)
+1           598.46                                  Tailspin Toys (Head Office)
+1           2557.60                                 Tailspin Toys (Head Office)
+1           4527.55                                 Tailspin Toys (Head Office)
+1           11911.70                                Tailspin Toys (Head Office)
+1           44.85                                   Tailspin Toys (Head Office)
+1           1770.08                                 Tailspin Toys (Head Office)
+1           264.04                                  Tailspin Toys (Head Office)
+1           4045.70                                 Tailspin Toys (Head Office)
+1           5009.40                                 Tailspin Toys (Head Office)
+1           4665.55                                 Tailspin Toys (Head Office)
+1           696.21                                  Tailspin Toys (Head Office)
+1           765.44                                  Tailspin Toys (Head Office)
+1           3441.03                                 Tailspin Toys (Head Office)
+1           2904.90                                 Tailspin Toys (Head Office)
+401         5549.90                                 Wingtip Toys (Head Office)
+401         1419.10                                 Wingtip Toys (Head Office)
+401         4565.50                                 Wingtip Toys (Head Office)
+401         1228.20                                 Wingtip Toys (Head Office)
+401         59.80                                   Wingtip Toys (Head Office)
+401         424.35                                  Wingtip Toys (Head Office)
+401         1155.75                                 Wingtip Toys (Head Office)
+401         3616.75                                 Wingtip Toys (Head Office)
+401         1023.31                                 Wingtip Toys (Head Office)
+401         1131.60                                 Wingtip Toys (Head Office)
+401         3544.30                                 Wingtip Toys (Head Office)
+401         3201.60                                 Wingtip Toys (Head Office)
+401         12470.60                                Wingtip Toys (Head Office)
+401         8212.15                                 Wingtip Toys (Head Office)
+401         4921.30                                 Wingtip Toys (Head Office)
+401         652.74                                  Wingtip Toys (Head Office)
+401         2403.50                                 Wingtip Toys (Head Office)
+401         28280.80                                Wingtip Toys (Head Office)
+401         2605.90                                 Wingtip Toys (Head Office)
+401         1254.75                                 Wingtip Toys (Head Office)
+401         6804.78                                 Wingtip Toys (Head Office)
+401         2526.90                                 Wingtip Toys (Head Office)
+802         3427.58                                 Cosmina Vlad
+810         1456.40                                 Alena Kellnerova
+813         5767.83                                 Shyam Poddar
+822         4127.93                                 Suparna Bhattacharya
+827         449.65                                  Crina Grasu
+835         5732.98                                 Dominic Davignon
+838         613.18                                  Pavel Bogdanov
+840         5975.40                                 Rodrigo Figueiredo
+849         201.25                                  Sabine Zalite
+856         5157.75                                 Satish Mittal
+860         3276.35                                 Marcela Lucescu
+890         745.20                                  Olya Izmaylov
+891         1517.08                                 Taneli Riutta
+895         2685.25                                 Geza Roman
+900         3677.96                                 Lilli Sokk
+900         2011.35                                 Lilli Sokk
+910         426.08                                  Elina Kaleja
+911         5422.25                                 Liidia Lepp
+915         3437.01                                 Ana Florea
+915         2074.14                                 Ana Florea
+919         3545.22                                 Kertu Sokk
+925         1910.73                                 Can ozcan
+933         1223.60                                 Joel Carrillo
+937         2217.33                                 Manca Hrastovsek
+953         6728.65                                 Linh Dao
+967         174.80                                  Meera Patel
+967         1982.60                                 Meera Patel
+972         1361.60                                 Lakshmi Benipal
+975         365.70                                  Prabodh Nair
+978         1361.60                                 Baalaamjali Devulapalli
+983         3876.65                                 Sabine Alksne
+986         1834.25                                 Neil Farrelly
+989         235.75                                  Milinka Zujovic
+995         13212.12                                Kumar Naicker
+1014        4038.80                                 Narendra Tickoo
+1015        4713.85                                 Isa Hulsegge
+1018        2678.35                                 Nils Kaulins
+1018        356.50                                  Nils Kaulins
+1025        104.65                                  Tuulikki Linna
+1028        3091.20                                 Emma Van Zant
+1053        325.45                                  Luis Saucedo
+
+(84 rows affected)
+
+
+Completion time: 2026-03-24T20:43:21.4307372+02:00
